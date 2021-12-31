@@ -1,0 +1,908 @@
+:root {
+  --theme: #d4a851;
+  --dark: #202020;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+}
+
+.container--2 {
+  width: 100%;
+  max-width: 1140px;
+  padding-right: 34px;
+  padding-left: 34px;
+  margin: 0 auto;
+}
+
+/* for college page  */
+/* Navbar-links */
+.page-header {
+  width: 100%;
+  padding: 10px 0;
+  background: #fff;
+  position: relative;
+  margin-top: -20px;
+}
+
+.menu-top-left ul li img {
+  margin-right: 8px;
+  color: rgb(0 0 0);
+
+  -webkit-filter: invert(100%); /* Safari/Chrome */
+  filter: invert(100%);
+}
+
+.menu-top-right ul li {
+  padding-left: 0px;
+  font-size: 20px;
+}
+.menu-top-right ul li a {
+  padding-left: 0px;
+}
+
+.nav-primary a {
+  color: #050505;
+  padding: 14px 16px;
+  display: block;
+  position: relative;
+  transition: all 0.4s ease-in-out;
+}
+
+.btn-primary {
+  color: #050505;
+  background: linear-gradient(275.29deg, #d4a851 6.47%, #be8920 81.19%);
+}
+
+.btn-primary:hover {
+  color: #050505;
+  background: linear-gradient(275.29deg, #be8920 6.47%, #d4a851 81.19%);
+}
+
+#hero-section {
+  margin-top: 80px;
+}
+
+img {
+  max-width: 100%;
+}
+.page-nav {
+  font-weight: 600;
+}
+.page-nav span {
+  color: var(--theme);
+}
+
+.banner {
+  margin-top: 30px;
+}
+
+.banner img {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  object-fit: cover;
+}
+
+.banner-overlay {
+  position: relative;
+  background: rgba(3, 4, 39, 0.69);
+  padding: 10px 0 400px;
+  color: #ffffff;
+}
+
+section {
+  position: relative;
+}
+
+.college {
+  position: relative;
+  margin: 0;
+}
+
+.college-wraper {
+  display: flex;
+  gap: 40px;
+  position: absolute;
+  margin-top: -110px;
+  width: 100%;
+}
+
+.clg-logo {
+  background: white;
+  padding: 30px;
+
+  filter: drop-shadow(0px 4px 14px rgba(0, 0, 0, 0.07));
+
+  border-radius: 20px;
+  width: 30%;
+  height: 100%;
+  display: flex;
+}
+
+.clg-logo img {
+  max-width: 100%;
+}
+
+.clg-info {
+  margin-top: 20px;
+}
+
+.college-name {
+  color: #fff;
+  font-size: 32px;
+  margin-bottom: 10px;
+}
+
+.clg-discription {
+  width: 100%;
+  font-size: 16px;
+}
+
+.clg-location {
+  color: #fff;
+  margin: 10px 0 30px 0;
+  font-size: 18px;
+  font-weight: 400;
+}
+
+.btn-apply {
+  background-color: var(--theme);
+  color: #fff;
+  font-weight: 600;
+  letter-spacing: 1.1px;
+}
+.btn-thirtery {
+  background: transparent;
+  color: var(--theme) !important;
+  border: 2px solid var(--theme);
+  color: #fff;
+  font-weight: 600;
+  letter-spacing: 1.1px;
+}
+
+.tab-data {
+  display: grid;
+  grid-template-columns: 30fr 80fr;
+  gap: 50px;
+  margin-top: 40px;
+  align-items: center;
+}
+
+.programs-side {
+  box-shadow: 0px 4px 36px rgba(0, 0, 0, 0.09);
+  padding: 18px;
+  border-radius: 20px;
+  align-self: start;
+}
+
+.program-title {
+  text-transform: uppercase;
+  color: var(--theme);
+}
+.program-title button {
+  float: right;
+  border: none;
+  background: none;
+  font-size: 20px;
+  color: var(--theme);
+}
+.program-link {
+  font-size: 16px;
+  margin-bottom: 13.5px;
+  border-radius: 10px;
+}
+.program-link:last-child {
+  margin-bottom: 0px;
+}
+
+.programs-side .open {
+  display: block;
+}
+.programs-side .close {
+  display: none;
+}
+
+.wrapper {
+  font-family: "popins" sans-serif;
+  width: 100%;
+  margin: 200px auto;
+  margin-bottom: 100px;
+  padding: 25px 30px 30px 30px;
+  border-radius: 5px;
+  background: #fff;
+}
+.wrapper header {
+  font-size: 30px;
+  font-weight: 600;
+  padding-bottom: 20px;
+}
+.wrapper nav {
+  position: relative;
+  width: 100%;
+  height: 50px;
+  display: flex;
+  align-items: center;
+}
+.wrapper nav label {
+  font-family: "Poppins", sans-serif;
+  text-transform: capitalize;
+  display: block;
+  height: 100%;
+  width: 100%;
+  text-align: center;
+  line-height: 50px;
+  cursor: pointer;
+  position: relative;
+  z-index: 1;
+  color: #787878;
+  border: 2px solid #d3d3d3;
+  font-size: 17px;
+  margin: 0 -1px;
+  transition: all 0.3s ease;
+}
+.wrapper nav label:hover {
+  color: #fff;
+  background: #be8920;
+}
+#overview:checked ~ nav label.overview,
+#Admission:checked ~ nav label.Admission,
+#courses:checked ~ nav label.courses,
+#placements:checked ~ nav label.placements,
+#reviews:checked ~ nav label.reviews {
+  color: #fff;
+  border: 3px solid var(--theme);
+}
+
+nav .slider {
+  position: absolute;
+  height: 100%;
+  width: 20%;
+  left: 0;
+  bottom: 0;
+  z-index: 0;
+  border-radius: 5px;
+  background: var(--theme);
+  transition: all 0.3s ease;
+}
+input[type="radio"] {
+  display: none;
+}
+#Admission:checked ~ nav .slider {
+  left: 20%;
+}
+#courses:checked ~ nav .slider {
+  left: 40%;
+}
+#help:checked ~ nav .slider {
+  left: 60%;
+}
+#placements:checked ~ nav .slider {
+  left: 60%;
+}
+#reviews:checked ~ nav .slider {
+  left: 80%;
+}
+
+section .content {
+  display: none;
+  background: #fff;
+}
+#overview:checked ~ section .overview-1,
+#Admission:checked ~ section .admission-2,
+#courses:checked ~ section .courses-3,
+#placements:checked ~ section .placement-4,
+#reviews:checked ~ section .content-5 {
+  display: block;
+}
+
+.multi-tabs .content {
+  width: 100%;
+}
+
+.box-course {
+  border-radius: 20px;
+  box-shadow: 0px 4px 36px rgba(0, 0, 0, 0.09);
+  padding: 30px;
+  margin-bottom: 50px;
+}
+
+.multi-tabs .content .title {
+  font-size: 32px;
+  font-weight: 700;
+  color: #d3a74f;
+  margin: 10px 0 30px 0;
+}
+
+.clg-text {
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+/* //College listing */
+.college-listing .box-course {
+  border-radius: 20px;
+  box-shadow: 0px 4px 36px rgba(0, 0, 0, 0.09);
+  padding: 0px;
+  margin-bottom: 50px;
+}
+
+.college-listing .closed-box {
+  padding: 30px;
+}
+.college-listing .open {
+  padding: 20px 30px;
+}
+
+.college-listing .course-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.course-info {
+  display: flex;
+  gap: 2.5rem;
+}
+
+.course-icons {
+  margin-right: 5px;
+}
+
+.course-info p {
+  font-weight: 500;
+}
+
+.show-more-btn {
+  width: 100%;
+  margin-top: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.show-more-btn .btn {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  padding: 10px 20px;
+}
+.show-more-btn i {
+  font-size: 20px;
+}
+
+/* .opened-box {
+  background: #fffcf8;
+} */
+
+.opened-box {
+  background: rgba(255, 252, 248, 86%);
+}
+
+.clg-courses {
+  background: #fff;
+  border: 2px solid #fff6e5;
+  border-radius: 20px;
+}
+.opened-heading {
+  font-size: 22px;
+  color: #d3a74f;
+  font-weight: 500;
+  margin-top: 1.5rem;
+  padding-top: 50px;
+  padding-bottom: 15px;
+  padding-left: 35px;
+}
+
+.courses-heading {
+  color: #484747;
+  background: #fff6e5;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 18px;
+  padding: 1rem;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+}
+
+.fees {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem;
+  font-size: 18px;
+}
+.fees p {
+  font-size: 18px;
+}
+.fees span {
+  font-weight: 700;
+}
+.fees-icon {
+  margin-right: 12px;
+}
+
+.fees .btn {
+  align-self: flex-end;
+}
+
+.clg-info-bottom {
+  padding: 0px 0px 30px 30px;
+  text-transform: capitalize;
+}
+.clg-info-bottom a {
+  color: #d3a74f;
+  margin-right: 20px;
+  font-size: 18px;
+}
+
+.btn-show-less {
+  margin: 0 auto;
+  padding: 30px 0 50px 0px;
+}
+.opened-btn {
+  background: #d3a74f;
+  color: #fff !important;
+  display: flex;
+  align-items: center;
+  margin: 0 auto;
+}
+.opened-btn i {
+  font-size: 25px;
+  margin-left: 10px;
+}
+
+/* FAQ section */
+.FAQ-section {
+  margin-top: 100px;
+}
+.faq-accordion .faq-accordion-item {
+  padding: 1rem;
+  margin-top: 20px;
+  border: 2px solid #ececec;
+}
+
+.faq-heading {
+  font-weight: 600;
+}
+
+.faq-accordion .faq-accordion-item [aria-expanded="true"] {
+  color: #d3a74f;
+}
+
+.faq-accordion button {
+  position: relative;
+  display: block;
+  text-align: left;
+  width: 100%;
+  padding: 1em 0;
+
+  font-size: 1.15rem;
+  font-weight: 400;
+  border: none;
+  background: none;
+  outline: none;
+}
+.faq-accordion button:hover,
+.faq-accordion button:focus {
+  cursor: pointer;
+  color: #d3a74f;
+}
+.faq-accordion button:hover::after,
+.faq-accordion button:focus::after {
+  cursor: pointer;
+  color: #03b5d2;
+  border: 1px solid #03b5d2;
+}
+.faq-accordion button .faq-accordion-title {
+  padding: 1em 1.5em 1em 1em;
+}
+.faq-accordion button .icon {
+  display: inline-block;
+  position: absolute;
+  top: 18px;
+  right: 0;
+  width: 22px;
+  height: 22px;
+}
+.faq-accordion button .icon::before {
+  display: block;
+  position: absolute;
+  content: "";
+  top: 9px;
+  left: 5px;
+  width: 10px;
+  height: 2px;
+  background: currentColor;
+}
+.faq-accordion button .icon::after {
+  display: block;
+  position: absolute;
+  content: "";
+  top: 5px;
+  left: 9px;
+  width: 2px;
+  height: 10px;
+  background: currentColor;
+}
+.faq-accordion button[aria-expanded="true"] {
+  color: #d3a74f;
+}
+.faq-accordion button[aria-expanded="true"] .icon::after {
+  width: 0;
+}
+.faq-accordion button[aria-expanded="true"] + .faq-accordion-content {
+  opacity: 1;
+  max-height: 9em;
+  transition: all 200ms linear;
+  will-change: opacity, max-height;
+}
+.faq-accordion .faq-accordion-content {
+  opacity: 0;
+  max-height: 0;
+  overflow: hidden;
+  transition: opacity 200ms linear, max-height 200ms linear;
+  will-change: opacity, max-height;
+}
+.faq-accordion .faq-accordion-content p {
+  font-size: 1rem;
+  font-weight: 300;
+  margin: 2em 0;
+}
+
+.actived {
+  background: rgba(255, 252, 248, 86%);
+  outline: 2px solid #ffab04;
+}
+
+/* form section */
+
+.want-to-learn .btn {
+  color: #fff;
+  font-size: 1rem !important;
+  border-radius: 10px;
+}
+
+.testmonials-botom-box h2 {
+  font-weight: bold;
+  font-size: 42px;
+  color: rgb(57 57 57);
+  margin-bottom: 30px;
+}
+.testmonials-botom-box {
+  position: relative;
+  padding: 52px 55px;
+  background: rgb(255 255 255);
+  box-shadow: none;
+  border-radius: 10px;
+  margin: 0px 0 0px 0;
+}
+.arrows {
+  position: absolute;
+  width: 85%;
+  top: 45%;
+  left: 6%;
+}
+.prev_nav {
+}
+.next_nav {
+  float: right;
+}
+.cliend-logo-section {
+  padding: 36px;
+}
+
+footer {
+  background: url("../img/footer.png");
+}
+
+@media (max-width: 1240px) {
+  .logo{
+    width: 10%;
+  }
+  .college-name {
+    color: rgb(255 255 255);
+    font-size: 26px;
+    margin-bottom: 10px;
+  }
+  .clg-btns .btn {
+    padding: 10px 25px;
+  }
+  .college-wraper {
+    gap: 30px;
+    width: 95%;
+  }
+
+  .clg-logo {
+    width: 40%;
+    height: 100%;
+    display: flex;
+  }
+  .clg-location {
+    font-size: 16px;
+  }
+  .clg-discription {
+    width: 95%;
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 1040px) {
+  .nav-primary a {
+    color: rgb(255, 255, 255);
+}
+@media (max-width: 940px) {
+  .clg-info {
+    margin-top: 10px;
+    width: 80%;
+  }
+
+  .college-name {
+    color: rgb(255 255 255);
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+
+  .college-wraper {
+    gap: 30px;
+    width: 95%;
+  }
+
+  .clg-logo {
+    width: 30%;
+  }
+  .clg-location {
+    font-size: 16px;
+    margin-bottom: 20px;
+  }
+
+  .tab-data {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+}
+@media (max-width: 810px) {
+  .clg-info {
+    margin-top: 10px;
+    width: 70%;
+  }
+
+  .college-wraper {
+    gap: 30px;
+    width: 95%;
+  }
+
+  .clg-logo {
+    width: 35%;
+  }
+  .clg-discription {
+    width: 95%;
+    font-size: 15px;
+  }
+
+  .tab-data {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  .accordion-title {
+    width: 90%;
+    font-size: 16px ;
+  }
+
+  .testmonials-botom-box h2 {
+    font-weight: bold;
+    font-size: 24px;
+    color: rgb(57 57 57);
+    margin-bottom: 30px;
+}
+.iit-Kharagpur h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+.want-to-learn h2 {
+  font-size: 24px;
+  margin-bottom: 18px;
+}
+}
+@media (max-width: 700px) {
+  .wrapper {
+    margin: 400px auto;
+    margin-bottom: 100px;
+  }
+  .college-wraper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    width: 92%;
+    margin-top: -130px;
+  }
+
+  .wrapper nav {
+    position: relative;
+    width: 100%;
+    height: 50px;
+    display: grid;
+  }
+  .wrapper nav label {
+    position: relative;
+    width: 100%;
+    height: 50px;
+  }
+  .programs-side {
+    margin-top: 200px;
+  }
+  nav .slider {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+
+  }
+  #Admission:checked ~ nav .slider {
+    top: 100%;
+    left: 0;
+  }
+  #courses:checked ~ nav .slider {
+    left: 0%;
+    top: 200%;
+  }
+  #help:checked ~ nav .slider {
+    left: 0%;
+    top: 300%;
+  }
+  #placements:checked ~ nav .slider {
+    left: 0%;
+    top: 300%;
+  }
+  #reviews:checked ~ nav .slider {
+    left: 0%;
+    top: 400%;
+  }
+
+  .clg-info {
+    margin-top: 10px;
+    width: 100%;
+  }
+
+  .clg-logo {
+    width: 30%;
+  }
+  .college-name {
+    color: #2d2d2d;
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+
+  .clg-location {
+    color: #2d2d2d;
+  }
+
+  .tab-data {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+  .faq-heading {
+    font-weight: 600;
+    font-size: 24px;
+}
+
+}
+
+@media (max-width: 600px) {
+  .clg-info {
+    margin-top: 10px;
+    width: 100%;
+  }
+
+  .clg-logo {
+    width: 40%;
+  }
+  .college-name {
+    color: #2d2d2d;
+    font-size: 24px;
+    margin-bottom: 0px;
+  }
+
+  .clg-location {
+    color: #2d2d2d;
+  }
+
+  .tab-data {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  .college-listing .course-header {
+    margin-bottom: 26px;
+  }
+
+  .multi-tabs .content .title {
+    font-size: 24px;
+  }
+
+  .multi-tabs .content .btn {
+    border-radius: 50px;
+    padding: 10px 20px;
+    font-size: 14px;
+  }
+
+  .college-listing .open {
+    padding: 20px 10px;
+  }
+  .clg-info-bottom a {
+    color: rgb(211 167 79);
+    margin-right: 20px;
+    font-size: 14px;
+}
+}
+}
+@media (max-width: 430px) {
+  .clg-logo {
+    width: 40%;
+    margin-top: 40px;
+}
+.college-name {
+  color: rgb(45 45 45);
+  font-size: 20px;
+  margin-bottom: 0px;
+}
+.clg-location {
+  color: rgb(45 45 45);
+  font-size: 14px;
+}
+.clg-discription {
+  width: 95%;
+  font-size: 13px;
+}
+  .college-wraper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    width: 85%;
+    margin-top: -130px;
+}
+  .clg-btns{
+    display: grid;
+    grid-template-columns: 1fr 1fr ;
+    align-items: center;
+    column-gap: 10px;
+    margin-bottom: 100px;
+  }
+  .clg-btns .btn{
+    padding: 10px 0px;
+    font-size: 14px;
+  }
+  .wrapper {
+    margin: 450px auto;
+    margin-bottom: 100px;
+    padding: 15px;
+}
+.multi-tabs .content .title {
+  font-size: 20px;
+  width: 100%;
+}
+.multi-tabs .content .btn {
+  font-size: 12px;
+}
+.course-info {
+  display: flex;
+  gap: .5rem;
+  align-items: center;
+  justify-content: space-between;
+}
+.course-info p {
+display: flex;
+align-items: center;
+flex-direction: column-reverse;
+font-size: 14px;
+margin-bottom: 0;
+gap: 5px;
+}
+.fees p {
+  font-size: 16px;
+}
+}
