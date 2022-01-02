@@ -406,3 +406,275 @@ function tabControl() {
         });
     }
 }
+
+
+jQuery(function ($) {
+    // Add en remove class on menu item hover  
+    $('.big-nav > ul > li').mouseover(function () {
+        $(this).addClass('show').siblings().removeClass('show');
+    });
+
+    // Get the minimum height the big-nav elemtn
+    var min_height = 50;
+    $('.big-nav > ul > li > ul').each(function () {
+        var this_height = $(this).outerHeight();
+        if (this_height > min_height) min_height = this_height;
+    });
+    $('.big-nav > ul, .nav .big-nav > ul > li > ul');
+
+});
+
+//FAQ
+const items = document.querySelectorAll(".faq-accordion button");
+
+const faq1 = document.querySelector(".faq-1");
+const faq2 = document.querySelector(".faq-2");
+const faq3 = document.querySelector(".faq-3");
+const faq4 = document.querySelector(".faq-4");
+const faq5 = document.querySelector(".faq-5");
+
+const faq6 = document.querySelector(".faq-6");
+const faq7 = document.querySelector(".faq-7");
+const faq8 = document.querySelector(".faq-8");
+const faq9 = document.querySelector(".faq-9");
+const faq10 = document.querySelector(".faq-10");
+
+const faq11 = document.querySelector(".faq-11");
+const faq12 = document.querySelector(".faq-12");
+const faq13 = document.querySelector(".faq-13");
+const faq14 = document.querySelector(".faq-14");
+const faq15 = document.querySelector(".faq-15");
+
+const faq16 = document.querySelector(".faq-16");
+const faq17 = document.querySelector(".faq-17");
+const faq18 = document.querySelector(".faq-18");
+const faq19 = document.querySelector(".faq-19");
+const faq20 = document.querySelector(".faq-20");
+
+
+
+
+function faqOpen1() {
+    faq1.classList.toggle("actived");
+}
+function faqOpen2() {
+    faq2.classList.toggle("actived");
+}
+function faqOpen3() {
+    faq3.classList.toggle("actived");
+
+}
+
+function faqOpen4() {
+    faq4.classList.toggle("actived");
+
+}
+
+function faqOpen5() {
+    faq5.classList.toggle("actived");
+
+}
+
+function faqOpen6() {
+    faq6.classList.toggle("actived");
+
+}
+
+function faqOpen7() {
+    faq7.classList.toggle("actived");
+
+}
+
+function faqOpen8() {
+    faq8.classList.toggle("actived");
+
+}
+
+function faqOpen9() {
+    faq9.classList.toggle("actived");
+
+}
+
+function faqOpen10() {
+    faq10.classList.toggle("actived");
+
+}
+
+
+
+function faqOpen11() {
+    faq11.classList.toggle("actived");
+}
+function faqOpen12() {
+    faq12.classList.toggle("actived");
+}
+function faqOpen13() {
+    faq13.classList.toggle("actived");
+
+}
+
+function faqOpen14() {
+    faq14.classList.toggle("actived");
+
+}
+
+function faqOpen15() {
+    faq5.classList.toggle("actived");
+
+}
+
+function faqOpen16() {
+    faq16.classList.toggle("actived");
+
+}
+
+function faqOpen17() {
+    faq17.classList.toggle("actived");
+
+}
+
+function faqOpen18() {
+    faq18.classList.toggle("actived");
+
+}
+
+function faqOpen19() {
+    faq19.classList.toggle("actived");
+
+}
+
+function faqOpen20() {
+    faq20.classList.toggle("actived");
+
+}
+
+
+
+function toggleAccordion() {
+    const itemToggle = this.getAttribute('aria-expanded');
+
+    for (i = 0; i < items.length; i++) {
+        items[i].setAttribute('aria-expanded', 'false');
+        // faq1.classList.remove("actived");
+        // faq2.classList.remove("actived");
+    }
+
+    if (itemToggle == 'false') {
+        this.setAttribute('aria-expanded', 'true');
+        // faq1.classList.add("actived");
+        // faq2.classList.add("actived");
+    }
+}
+
+
+items.forEach(item => item.addEventListener('click', toggleAccordion));
+
+
+
+
+
+
+
+
+//Progress-bar
+const progress = document.querySelector('.progress-done');
+
+progress.style.width = progress.getAttribute('data-done') + '%';
+progress.style.opacity = 1;
+
+const progress2 = document.querySelector('.progress-done-2');
+
+
+progress2.style.width = progress2.getAttribute('data-done') + '%';
+progress2.style.opacity = 1;
+
+const progress3 = document.querySelector('.progress-done-3');
+
+
+
+progress3.style.width = progress3.getAttribute('data-done') + '%';
+progress3.style.opacity = 1;
+
+
+const progress4 = document.querySelector('.progress-done-4');
+
+
+
+progress4.style.width = progress4.getAttribute('data-done') + '%';
+progress4.style.opacity = 1;
+
+const progress5 = document.querySelector('.progress-done-5');
+
+
+
+progress5.style.width = progress5.getAttribute('data-done') + '%';
+progress5.style.opacity = 1;
+
+
+
+// Read- More
+function read_more() {
+    var readmore = $('.read_more');
+    var comment = $('.answer_comment p').text();
+
+    //goes through each index of the array of 'review_comment p'
+    $('.answer_comment p').each(function (i) {
+        //calculates height of comment variable
+        var commentheight = $(this).height();
+        //calculates scroll height of comment on each div
+        var scrollcommentheight = $('.answer_comment p')[i].scrollHeight;
+
+        //if comment height is same as scroll height then hide read more button
+        if (commentheight == scrollcommentheight) {
+            $(this).siblings(readmore).hide();
+        }
+        //otherwise read more button shows
+        else {
+            $(this).siblings(readmore).text("Read More");
+        }
+    });
+
+
+    readmore.on('click', function () {
+        var $this = $(this);
+        event.preventDefault();
+
+        $this.siblings('.answer_comment p').toggleClass('active');
+
+        if ($this.siblings('.answer_comment p').text().length < 230) {
+            $this.text("Read More..");
+        }
+        if ($('.answer_comment p').hasClass('active')) {
+            $this.text("Read Less");
+        } else {
+            $this.text("Read More");
+        }
+    });
+};
+
+$(function () {
+    //Calling function after Page Load
+    read_more();
+});
+
+
+// REview open
+const modal = document.querySelector("#modal")
+const openModalButton = document.querySelector("#open-modal-btn")
+const closeModalButton = document.querySelector("#close-modal-btn")
+const overlay = document.querySelector("#overlay")
+
+openModalButton.addEventListener("click", () => {
+    modal.classList.add("open")
+    overlay.classList.add("open")
+})
+
+closeModalButton.addEventListener("click", closeModal)
+
+overlay.addEventListener("click", closeModal)
+
+function closeModal() {
+    modal.classList.remove("open")
+    overlay.classList.remove("open")
+}
+
